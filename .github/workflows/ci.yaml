@@ -1,0 +1,13 @@
+name: CI
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v4
+      - name: Print
+        run: |
+          echo "Deployed, Enjoy"
